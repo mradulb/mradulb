@@ -11,11 +11,7 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
-android {
-    lintOptions {
-        abortOnError false
-    }
-}
+
 allprojects {
     repositories {
         jcenter()
@@ -24,4 +20,9 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+android {
+    lintOptions {
+        abortOnError false
+    }
 }
